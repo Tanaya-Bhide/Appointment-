@@ -16,7 +16,6 @@ function Register() {
       toast.error("something went wrong");
     }
   };
-
   return (
     <div className="authentication">
       {" "}
