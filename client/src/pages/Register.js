@@ -1,19 +1,24 @@
 import React from "react";
 import { Button, Form, Input } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
+
 function Register() {
+  const navigate = useNavigate();
   const onFinish = async (values) => {
     try {
-      const response = await axios.post("/api/user/register", values);
+      const response = await axios.post("api/user/register", values);
+      console.log(values);
       if (response.data.success) {
         toast.success(response.data.message);
+        toast("Redirecting to login page");
+        navigate("/login");
       } else {
         toast.success(response.data.message);
       }
     } catch (error) {
-      toast.error("something went wrong");
+      console.log(error);
     }
   };
   return (
