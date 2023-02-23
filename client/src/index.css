@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
- 
+
 /*antd override */
 input {
   border-radius: 2px !important;
@@ -23,6 +23,27 @@ label {
 
 
 /* common styling */
+.spinner-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  opacity: 0.8;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+}
+
+.spinner-border {
+  width: 5rem;
+  height: 5rem;
+  color: white !important
+}
+
 .card-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -45,12 +66,12 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:#005555
+  background-color: #005555
 }
 
 .authentication-form {
   width: 400px;
-  
+
 }
 
 .authentication .card-title {
@@ -61,7 +82,7 @@ label {
   max-width: max-content !important;
   padding: 7px 15px;
   margin-left: -40px;
-  border-bottom-left-radius: 5px ;
+  border-bottom-left-radius: 5px;
 }
 
 .primary-button {
@@ -82,4 +103,3 @@ label {
 .anchor :hover {
   text-decoration: underline !important;
 }
-
